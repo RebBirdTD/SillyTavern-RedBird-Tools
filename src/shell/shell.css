@@ -110,7 +110,7 @@ body.rbt-shell .rbt-sheet-head {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 15px;
+  font-size: calc(15px * var(--fontScale, 1));
   font-weight: 600;
   color: var(--SmartThemeBodyColor);
 }
@@ -122,7 +122,7 @@ body.rbt-shell .rbt-sheet-head {
   border-radius: var(--rbd-r-s);
   background: transparent;
   color: var(--rbd-text2, #9ca1aa);
-  font-size: 14px;
+  font-size: calc(14px * var(--fontScale, 1));
   cursor: pointer;
 }
 .rbt-sheet-close:hover { background: var(--rbd-bg2-hover, color-mix(in srgb, var(--rbd-text1) 8%, transparent)); color: var(--SmartThemeBodyColor); }
@@ -202,7 +202,7 @@ body.rbt-shell .rbt-left {
   background: var(--rbd-bg1, var(--SmartThemeBlurTintColor, #17191e));
   border-right: 1px solid var(--rbd-hairline, color-mix(in srgb, var(--rbd-text1) 6%, transparent));
   font-family: var(--rbd-font, inherit);
-  font-size: 13px;
+  font-size: calc(13px * var(--fontScale, 1));
 }
 body.rbt-shell.rbt-shell-lcollapsed .rbt-left { display: none; }
 
@@ -224,20 +224,20 @@ body.rbt-shell.rbt-shell-lcollapsed .rbt-left { display: none; }
   border-radius: var(--rbd-r-s);
   background: transparent;
   color: var(--SmartThemeBodyColor);
-  font-size: 15px;
+  font-size: calc(15px * var(--fontScale, 1));
   font-weight: 600;
   cursor: pointer;
 }
 .rbt-brand:hover { background: var(--rbd-bg2, color-mix(in srgb, var(--rbd-text1) 5%, transparent)); }
-.rbt-brand-mark { font-size: 16px; color: #e5484d; } /* 品牌标志：红色小鸟（字体图标，各系统显示一致，不用 emoji） */
+.rbt-brand-mark { font-size: calc(16px * var(--fontScale, 1)); color: #e5484d; } /* 品牌标志：红色小鸟（字体图标，各系统显示一致，不用 emoji） */
 .rbt-left-brand { display: flex; align-items: center; gap: 4px; min-width: 0; }
-.rbt-ver { font-size: 11.5px; color: var(--rbd-text3, #6b707a); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.rbt-ver { font-size: calc(11.5px * var(--fontScale, 1)); color: var(--rbd-text3, #6b707a); font-variant-numeric: tabular-nums; white-space: nowrap; }
 /* 有新版本：普通按钮（浅底、细边、圆角矩形），右上角一个红点 */
 button.rbt-ver.new {
   position: relative; display: inline-flex; align-items: center; margin: 0 0 0 4px; padding: 3px 10px;
   border: 1px solid color-mix(in srgb, var(--rbd-text1, #888) 18%, transparent); border-radius: var(--rbd-r-s, 8px);
   background: color-mix(in srgb, var(--rbd-text1, #888) 6%, transparent); color: var(--SmartThemeBodyColor);
-  font-size: 12px; font-weight: 500; cursor: pointer;
+  font-size: calc(12px * var(--fontScale, 1)); font-weight: 500; cursor: pointer;
 }
 button.rbt-ver.new:hover { background: color-mix(in srgb, var(--rbd-text1, #888) 12%, transparent); }
 .rbt-ver-dot { position: absolute; top: -3px; right: -3px; width: 8px; height: 8px; border-radius: 50%; background: #e5484d; box-shadow: 0 0 0 2px var(--rbd-bg1, var(--SmartThemeBlurTintColor)); }
@@ -276,16 +276,16 @@ button.rbt-ver.new:hover { background: color-mix(in srgb, var(--rbd-text1, #888)
   background: transparent;
   color: var(--rbd-text2, #9ca1aa);
   font: inherit;
-  font-size: 11px;
+  font-size: calc(11px * var(--fontScale, 1));
   line-height: 1.2;
   white-space: nowrap;
   cursor: pointer;
 }
-.rbt-gbtn i { font-size: 15px; }
+.rbt-gbtn i { font-size: calc(15px * var(--fontScale, 1)); }
 .rbt-gbtn:hover { background: var(--rbd-bg2, color-mix(in srgb, var(--rbd-text1) 5%, transparent)); color: var(--SmartThemeBodyColor); }
 .rbt-gbtn.active { background: var(--rbd-accent-soft, rgba(226, 114, 91, 0.14)); color: var(--rbd-accent, #e2725b); }
-.rbt-gbtn.compact { flex-direction: row; gap: 6px; padding: var(--rbd-s-1) var(--rbd-s-3); font-size: 13px; }
-.rbt-gbtn.compact i { font-size: 13px; }
+.rbt-gbtn.compact { flex-direction: row; gap: 6px; padding: var(--rbd-s-1) var(--rbd-s-3); font-size: calc(13px * var(--fontScale, 1)); }
+.rbt-gbtn.compact i { font-size: calc(13px * var(--fontScale, 1)); }
 
 /* 工具区和聊天列表之间一条细线分组 */
 .rbt-left-actions { display: flex; flex-direction: column; gap: 10px; margin: 0 12px; padding: 12px 0 8px; border-top: 1px solid var(--rbd-hairline, color-mix(in srgb, var(--rbd-text1) 7%, transparent)); flex-shrink: 0; }
@@ -326,7 +326,7 @@ button.rbt-ver.new:hover { background: color-mix(in srgb, var(--rbd-text1, #888)
 .rbt-recent { flex: 1; overflow-y: auto; padding: var(--rbd-s-1) var(--rbd-s-1) var(--rbd-s-3); }
 .rbt-recent-group h4 {
   margin: var(--rbd-s-3) var(--rbd-s-2) var(--rbd-s-1);
-  font-size: 11px;
+  font-size: calc(11px * var(--fontScale, 1));
   font-weight: 600;
   color: var(--rbd-text3, #6b707a);
 }
@@ -351,18 +351,18 @@ button.rbt-ver.new:hover { background: color-mix(in srgb, var(--rbd-text1, #888)
 .rbt-recent-main { display: flex; flex-direction: column; min-width: 0; flex: 1; }
 .rbt-recent-line1 { display: flex; align-items: baseline; gap: 6px; }
 .rbt-recent-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
-.rbt-recent-time { flex-shrink: 0; font-size: 11px; color: var(--rbd-text3, #6b707a); }
+.rbt-recent-time { flex-shrink: 0; font-size: calc(11px * var(--fontScale, 1)); color: var(--rbd-text3, #6b707a); }
 .rbt-recent-preview {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 12px;
+  font-size: calc(12px * var(--fontScale, 1));
   color: var(--rbd-text2, #9ca1aa);
 }
 /* 列表最下面的「显示更多（还有 N 个）」。别和每行的「⋯」（.rbt-recent-more）共用样式 */
 .rbt-recent-showmore {
   display: block; width: 100%; min-height: 36px; margin-top: var(--rbd-s-1); padding: var(--rbd-s-2);
-  border: 0; border-radius: var(--rbd-r-s); background: none; color: var(--rbd-text3, #6b707a); font: inherit; font-size: 13px; cursor: pointer;
+  border: 0; border-radius: var(--rbd-r-s); background: none; color: var(--rbd-text3, #6b707a); font: inherit; font-size: calc(13px * var(--fontScale, 1)); cursor: pointer;
 }
 .rbt-recent-showmore:hover { background: color-mix(in srgb, var(--rbd-text1, #ececf1) 5%, transparent); color: var(--rbd-text1, inherit); }
 .rbt-recent-empty { padding: 24px 8px; text-align: center; color: var(--rbd-text3, #6b707a); }
@@ -383,7 +383,7 @@ button.rbt-ver.new:hover { background: color-mix(in srgb, var(--rbd-text1, #888)
   background: transparent;
   color: var(--rbd-text3, #6b707a);
   font: inherit;
-  font-size: 12px;
+  font-size: calc(12px * var(--fontScale, 1));
   cursor: pointer;
 }
 .rbt-foot-btn:hover { color: var(--SmartThemeBodyColor); background: var(--rbd-bg2, color-mix(in srgb, var(--rbd-text1) 5%, transparent)); }
@@ -406,12 +406,12 @@ body.rbt-shell .rbt-nav {
   background: var(--rbd-canvas-solid, var(--rbd-canvas, var(--SmartThemeBlurTintColor, #0f1013)));
   border-bottom: 1px solid var(--rbd-hairline, color-mix(in srgb, var(--rbd-text1) 6%, transparent));
   font-family: var(--rbd-font, inherit);
-  font-size: 13px;
+  font-size: calc(13px * var(--fontScale, 1));
   transition: none;
 }
 .rbt-nav-title { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0; }
 .rbt-nav-avatar { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
-.rbt-nav-name { font-size: 15px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rbt-nav-name { font-size: calc(15px * var(--fontScale, 1)); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .rbt-nav-save {
   display: inline-flex;
   align-items: center;
@@ -428,7 +428,7 @@ body.rbt-shell .rbt-nav {
   text-overflow: ellipsis;
   cursor: pointer;
 }
-.rbt-nav-save i { font-size: 10px; }
+.rbt-nav-save i { font-size: calc(10px * var(--fontScale, 1)); }
 .rbt-nav-save:hover { background: var(--rbd-bg2, color-mix(in srgb, var(--rbd-text1) 5%, transparent)); color: var(--SmartThemeBodyColor); }
 .rbt-nav-actions { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
 .rbt-tb-short { display: none; }
@@ -465,7 +465,7 @@ body.rbt-shell.rbt-shell-ready .rbt-nav { transition: left 0.18s ease, width 0.1
   background: transparent;
   color: var(--rbd-text3, #6b707a);
   font: inherit;
-  font-size: 13px;
+  font-size: calc(13px * var(--fontScale, 1));
   font-weight: 600;
   cursor: pointer;
 }
@@ -483,7 +483,7 @@ body.rbt-shell.rbt-shell-ready .rbt-nav { transition: left 0.18s ease, width 0.1
   background: var(--rbd-bg2, color-mix(in srgb, var(--rbd-text1) 6%, transparent));
   color: var(--rbd-text2, #9ca1aa);
   font: inherit;
-  font-size: 12px;
+  font-size: calc(12px * var(--fontScale, 1));
 }
 .rbt-char-lib { display: flex; gap: 4px; padding: 0 12px 4px; flex-shrink: 0; }
 .rbt-lib-btn {
@@ -498,7 +498,7 @@ body.rbt-shell.rbt-shell-ready .rbt-nav { transition: left 0.18s ease, width 0.1
   background: transparent;
   color: var(--rbd-text2, #9ca1aa);
   font: inherit;
-  font-size: 12px;
+  font-size: calc(12px * var(--fontScale, 1));
   cursor: pointer;
 }
 .rbt-lib-btn.icon { flex: 0 0 30px; }
@@ -523,7 +523,7 @@ body.rbt-shell.rbt-shell-ready .rbt-nav { transition: left 0.18s ease, width 0.1
   cursor: pointer;
 }
 .rbt-char-open .rbt-recent-name { display: block; }
-.rbt-char-favmark { margin-right: 4px; font-size: 10px; color: var(--rbd-accent, #e2725b); }
+.rbt-char-favmark { margin-right: 4px; font-size: calc(10px * var(--fontScale, 1)); color: var(--rbd-accent, #e2725b); }
 .rbt-char-tags { display: flex; gap: 4px; margin-top: 2px; overflow: hidden; }
 .rbt-char-tag {
   flex-shrink: 0;
@@ -532,7 +532,7 @@ body.rbt-shell.rbt-shell-ready .rbt-nav { transition: left 0.18s ease, width 0.1
   border-radius: var(--rbd-r-xs);
   background: var(--rbd-bg2, color-mix(in srgb, var(--rbd-text1) 6%, transparent));
   color: var(--rbd-text3, #6b707a);
-  font-size: 11px;
+  font-size: calc(11px * var(--fontScale, 1));
   line-height: 17px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -559,7 +559,7 @@ body.rbt-shell.rbt-shell-ready .rbt-nav { transition: left 0.18s ease, width 0.1
   border-radius: var(--rbd-r-s);
   background: transparent;
   color: var(--rbd-text2, #9ca1aa);
-  font-size: 12px;
+  font-size: calc(12px * var(--fontScale, 1));
   cursor: pointer;
 }
 .rbt-row-act:hover { background: var(--rbd-bg2-hover, color-mix(in srgb, var(--rbd-text1) 10%, transparent)); color: var(--SmartThemeBodyColor); }
@@ -576,7 +576,7 @@ body.rbt-shell.rbt-shell-ready .rbt-nav { transition: left 0.18s ease, width 0.1
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 12px;
+  font-size: calc(12px * var(--fontScale, 1));
   color: var(--rbd-text2, #9ca1aa);
 }
 .rbt-sheet-note:empty { display: none; }
@@ -633,7 +633,7 @@ body.rbt-shell.rbt-shell-ready .rbt-nav { transition: left 0.18s ease, width 0.1
 .rbt-sheet-rail button {
   display: flex; align-items: center; gap: 10px; min-height: 36px; padding: 0 12px;
   border: 0; border-radius: var(--rbd-r-s); background: transparent;
-  color: var(--rbd-text2, #9ca1aa); font: inherit; font-size: 14px; text-align: left; cursor: pointer;
+  color: var(--rbd-text2, #9ca1aa); font: inherit; font-size: calc(14px * var(--fontScale, 1)); text-align: left; cursor: pointer;
 }
 .rbt-sheet-rail button i { color: var(--rbd-text3, #6b7079); }
 .rbt-sheet-rail button:hover { color: var(--SmartThemeBodyColor); background: var(--rbd-bg2, color-mix(in srgb, var(--rbd-text1) 5%, transparent)); }
@@ -645,7 +645,7 @@ body.rbt-shell.rbt-shell-ready .rbt-nav { transition: left 0.18s ease, width 0.1
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 11px;
+  font-size: calc(11px * var(--fontScale, 1));
   color: #e0a040;
 }
 .rbt-globals .rbt-gbtn span { overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
@@ -676,7 +676,7 @@ body.rbt-shell #qr--bar #qr--popoutTrigger {
   flex: 0 0 auto;
   margin: 0 !important;
   padding: 2px 8px !important;
-  font-size: 12px !important;
+  font-size: calc(12px * var(--fontScale, 1)) !important;
   line-height: 20px;
   white-space: nowrap;
 }
@@ -713,7 +713,7 @@ body.rbt-shell #qr--bar #qr--popoutTrigger {
 .rbt-sheet-tabs { display: inline-flex; gap: 2px; margin: 0 auto 0 14px; padding: 2px; border-radius: var(--rbd-r-s); background: var(--rbd-bg3, rgba(0, 0, 0, 0.22)); }
 .rbt-sheet-tabs button {
   padding: var(--rbd-s-1) var(--rbd-s-3);
-  font-size: 12px !important;
+  font-size: calc(12px * var(--fontScale, 1)) !important;
   border: 0;
   border-radius: calc(var(--rbd-r-s) - 2px);
   background: transparent;
@@ -742,12 +742,12 @@ body.rbt-shell #qr--bar #qr--popoutTrigger {
   box-shadow: inset 0 0 0 1px var(--rbd-line, color-mix(in srgb, var(--rbd-text1) 12%, transparent));
   color: var(--SmartThemeBodyColor);
   font: inherit;
-  font-size: 13px;
+  font-size: calc(13px * var(--fontScale, 1));
   font-weight: 600;
   white-space: nowrap;
   cursor: pointer;
 }
-.rbt-gtool > i { font-size: 13px; opacity: 0.85; }
+.rbt-gtool > i { font-size: calc(13px * var(--fontScale, 1)); opacity: 0.85; }
 .rbt-gtool:hover { background: var(--rbd-bg2-hover, color-mix(in srgb, var(--rbd-text1) 12%, transparent)); }
 .rbt-gtool.active { background: var(--rbd-bg2-hover, color-mix(in srgb, var(--rbd-text1) 12%, transparent)); box-shadow: inset 0 0 0 1px var(--rbd-text3, #6b707a); }
 
@@ -771,15 +771,15 @@ body.rbt-shell.rbt-home #sheld { visibility: hidden; }
 }
 
 .rbt-home-head { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: var(--rbd-s-4); }
-.rbt-home-head h1 { margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
-.rbt-home-head h1 small { margin-left: 6px; font-size: 15px; font-weight: 500; color: var(--rbd-text3, #6b707a); }
+.rbt-home-head h1 { margin: 0; font-size: calc(26px * var(--fontScale, 1)); font-weight: 700; letter-spacing: -0.01em; line-height: 1.2; }
+.rbt-home-head h1 small { margin-left: 6px; font-size: calc(15px * var(--fontScale, 1)); font-weight: 500; color: var(--rbd-text3, #6b707a); }
 .rbt-home-search { width: 260px; }
 .rbt-home-actions { display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap; }
 .rbt-home-btn {
   display: inline-flex; align-items: center; gap: 6px;
   padding: 7px 14px; border: 0; border-radius: 999px;
   background: var(--rbd-bg2, color-mix(in srgb, var(--rbd-text1) 7%, transparent));
-  color: var(--SmartThemeBodyColor); font: inherit; font-size: 13px; cursor: pointer; white-space: nowrap;
+  color: var(--SmartThemeBodyColor); font: inherit; font-size: calc(13px * var(--fontScale, 1)); cursor: pointer; white-space: nowrap;
 }
 .rbt-home-btn:hover { background: var(--rbd-bg2-hover, color-mix(in srgb, var(--rbd-text1) 12%, transparent)); }
 /* 「导入文件」：只在手机上出现（电脑上用左栏那个），和左栏一样是主题色浅底 */
@@ -798,21 +798,21 @@ body.rbt-shell.rbt-home #sheld { visibility: hidden; }
 .rbt-asheet-items { display: flex; flex-direction: column; overflow: hidden; border-radius: var(--rbd-r-l, 16px); background: var(--rbd-bg1, #1e1e21); }
 .rbt-asheet-title {
   padding: 14px 16px 10px; border-radius: var(--rbd-r-l, 16px) var(--rbd-r-l, 16px) 0 0; margin-bottom: -8px;
-  background: var(--rbd-bg1, #1e1e21); color: var(--rbd-text3, #8a8f98); font-size: 13px; font-weight: 600; text-align: center;
+  background: var(--rbd-bg1, #1e1e21); color: var(--rbd-text3, #8a8f98); font-size: calc(13px * var(--fontScale, 1)); font-weight: 600; text-align: center;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .rbt-asheet-title + .rbt-asheet-items { border-top-left-radius: 0; border-top-right-radius: 0; border-top: 1px solid var(--rbd-hairline, rgba(255, 255, 255, 0.07)); }
 .rbt-asheet-items button {
   display: flex; align-items: center; justify-content: center; gap: 8px; height: 54px; padding: 0 16px;
   border: 0; border-bottom: 1px solid var(--rbd-hairline, rgba(255, 255, 255, 0.07)); background: none;
-  color: var(--rbd-accent, #0a84ff); font: inherit; font-size: 17px; cursor: pointer;
+  color: var(--rbd-accent, #0a84ff); font: inherit; font-size: calc(17px * var(--fontScale, 1)); cursor: pointer;
 }
 .rbt-asheet-items button:last-child { border-bottom: 0; }
-.rbt-asheet-items button i { font-size: 15px; opacity: 0.85; }
+.rbt-asheet-items button i { font-size: calc(15px * var(--fontScale, 1)); opacity: 0.85; }
 .rbt-asheet-items button.danger { color: #ff453a; }
 .rbt-asheet-cancel {
   height: 54px; border: 0; border-radius: var(--rbd-r-l, 16px); background: var(--rbd-bg1, #1e1e21);
-  color: var(--rbd-accent, #0a84ff); font: inherit; font-size: 17px; font-weight: 600; cursor: pointer;
+  color: var(--rbd-accent, #0a84ff); font: inherit; font-size: calc(17px * var(--fontScale, 1)); font-weight: 600; cursor: pointer;
 }
 
 /* 只用在管理条的「完成」：首页本身不放实心主按钮 */
@@ -820,7 +820,7 @@ body.rbt-shell.rbt-home #sheld { visibility: hidden; }
 .rbt-home-btn.primary:hover { filter: brightness(1.08); }
 /* 「＋ 新建」和它的菜单 */
 .rbt-home-new { position: relative; }
-.rbt-home-new-chev { font-size: 9px !important; opacity: 0.6 !important; margin-left: 2px; }
+.rbt-home-new-chev { font-size: calc(9px * var(--fontScale, 1)) !important; opacity: 0.6 !important; margin-left: 2px; }
 .rbt-home-newmenu {
   position: absolute; top: calc(100% + 6px); right: 0; z-index: 30;
   display: flex; flex-direction: column; min-width: 160px; padding: var(--rbd-s-1);
@@ -829,17 +829,17 @@ body.rbt-shell.rbt-home #sheld { visibility: hidden; }
 }
 .rbt-home-newmenu button {
   display: flex; align-items: center; gap: var(--rbd-s-2); height: 34px; padding: 0 var(--rbd-s-2);
-  border: 0; border-radius: var(--rbd-r-s); background: none; color: var(--SmartThemeBodyColor); font: inherit; font-size: 13px; text-align: left; cursor: pointer;
+  border: 0; border-radius: var(--rbd-r-s); background: none; color: var(--SmartThemeBodyColor); font: inherit; font-size: calc(13px * var(--fontScale, 1)); text-align: left; cursor: pointer;
 }
 .rbt-home-newmenu button:hover { background: var(--rbd-bg2-hover, color-mix(in srgb, var(--rbd-text1) 12%, transparent)); }
-.rbt-home-newmenu button i { font-size: 12px; opacity: 0.75; }
-.rbt-home-btn i { font-size: 12px; opacity: 0.85; }
+.rbt-home-newmenu button i { font-size: calc(12px * var(--fontScale, 1)); opacity: 0.75; }
+.rbt-home-btn i { font-size: calc(12px * var(--fontScale, 1)); opacity: 0.85; }
 
 .rbt-home-filters { display: flex; align-items: center; gap: var(--rbd-s-3); margin-bottom: var(--rbd-s-5); }
 .rbt-home-pills { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; flex: 1; }
 .rbt-home-pills button {
   padding: 5px 14px; border: 0; border-radius: 999px; background: transparent;
-  color: var(--rbd-text2, #9ca1aa); font: inherit; font-size: 13px; cursor: pointer;
+  color: var(--rbd-text2, #9ca1aa); font: inherit; font-size: calc(13px * var(--fontScale, 1)); cursor: pointer;
 }
 .rbt-home-pills button:hover { color: var(--SmartThemeBodyColor); background: var(--rbd-bg2, color-mix(in srgb, var(--rbd-text1) 5%, transparent)); }
 .rbt-home-pills button.active { background: var(--SmartThemeBodyColor, #e8e8e8); color: var(--rbd-canvas, #0f1012); font-weight: 600; }
@@ -847,7 +847,7 @@ body.rbt-shell.rbt-home #sheld { visibility: hidden; }
   width: auto !important; min-width: 0; margin: 0 !important;
   padding: 5px 10px !important; border: 0 !important; border-radius: 999px !important;
   background: transparent !important;
-  color: var(--rbd-text2, #9ca1aa) !important; font-size: 13px !important; cursor: pointer;
+  color: var(--rbd-text2, #9ca1aa) !important; font-size: calc(13px * var(--fontScale, 1)) !important; cursor: pointer;
 }
 .rbt-home-select:hover { color: var(--SmartThemeBodyColor) !important; background: var(--rbd-bg2, color-mix(in srgb, var(--rbd-text1) 5%, transparent)) !important; }
 /* 「待处理」是提醒，不只是筛选：前面一个琥珀色小点，和卡片上的提醒同色 */
@@ -856,9 +856,9 @@ body.rbt-shell.rbt-home #sheld { visibility: hidden; }
 /* 排序和「管理」：管的是下面这一列卡片，放在一起 */
 .rbt-home-tools { display: flex; align-items: center; gap: var(--rbd-s-2); flex: none; }
 .rbt-home-manage { display: inline-flex; align-items: center; gap: 6px; font: inherit; }
-.rbt-home-manage i { font-size: 12px; }
+.rbt-home-manage i { font-size: calc(12px * var(--fontScale, 1)); }
 .rbt-home-manage.active { color: var(--rbd-accent, #0a84ff) !important; background: var(--rbd-accent-soft, rgba(10, 132, 255, 0.18)) !important; }
-.rbt-home-note { margin: -8px 0 20px; font-size: 13px; color: var(--rbd-text2, #9ca1aa); line-height: 1.6; }
+.rbt-home-note { margin: -8px 0 20px; font-size: calc(13px * var(--fontScale, 1)); color: var(--rbd-text2, #9ca1aa); line-height: 1.6; }
 .rbt-linkbtn { padding: 0 2px; border: 0; background: none; color: var(--rbd-accent, #e2725b); font: inherit; cursor: pointer; }
 .rbt-home-empty { padding: 80px 0; text-align: center; color: var(--rbd-text3, #6b707a); }
 
@@ -906,12 +906,12 @@ body.rbt-shell.rbt-home #sheld { visibility: hidden; }
   color: #fff;
 }
 .rbt-hcard-name {
-  font-size: 19px; font-weight: 700; line-height: 1.25; letter-spacing: -0.01em;
+  font-size: calc(19px * var(--fontScale, 1)); font-weight: 700; line-height: 1.25; letter-spacing: -0.01em;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
   text-wrap: balance;
 }
 .rbt-hcard-meta {
-  max-width: 100%; font-size: 12px; color: rgba(255, 255, 255, 0.72);
+  max-width: 100%; font-size: calc(12px * var(--fontScale, 1)); color: rgba(255, 255, 255, 0.72);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 /* 左上角：毛玻璃小标签 */
@@ -921,10 +921,10 @@ body.rbt-shell.rbt-home #sheld { visibility: hidden; }
   padding: 5px 11px 5px 9px; border-radius: 999px;
   background: rgba(20, 20, 24, 0.42);
   -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4);
-  color: #fff; font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  color: #fff; font-size: calc(12px * var(--fontScale, 1)); font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .rbt-hcard-pill.warn > i { flex: none; width: 8px; height: 8px; border-radius: 50%; background: #f0a43a; }
-.rbt-hcard-pill > i.fa-solid { font-size: 11px; opacity: 0.9; }
+.rbt-hcard-pill > i.fa-solid { font-size: calc(11px * var(--fontScale, 1)); opacity: 0.9; }
 /* 右上角：收藏标记；悬停时换成收藏 / 编辑按钮 */
 
 .rbt-hcard-acts {
@@ -936,7 +936,7 @@ body.rbt-shell.rbt-home #sheld { visibility: hidden; }
   border: 0; border-radius: 50%;
   background: rgba(20, 20, 24, 0.5);
   -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
-  color: #fff; font-size: 12px; cursor: pointer;
+  color: #fff; font-size: calc(12px * var(--fontScale, 1)); cursor: pointer;
 }
 .rbt-hcard-act:hover { background: rgba(20, 20, 24, 0.72); }
 .rbt-hcard-act.on { color: #ffd45e; }
@@ -950,10 +950,10 @@ body.rbt-shell.rbt-home #sheld { visibility: hidden; }
 }
 .rbt-hcard-menu button {
   display: flex; align-items: center; gap: var(--rbd-s-2); height: 32px; padding: 0 var(--rbd-s-2);
-  border: 0; border-radius: var(--rbd-r-s); background: none; color: #fff; font: inherit; font-size: 13px; text-align: left; cursor: pointer;
+  border: 0; border-radius: var(--rbd-r-s); background: none; color: #fff; font: inherit; font-size: calc(13px * var(--fontScale, 1)); text-align: left; cursor: pointer;
 }
 .rbt-hcard-menu button:hover { background: rgba(255, 255, 255, 0.12); }
-.rbt-hcard-menu button i { font-size: 12px; opacity: 0.8; }
+.rbt-hcard-menu button i { font-size: calc(12px * var(--fontScale, 1)); opacity: 0.8; }
 .rbt-hcard-menu button.danger { color: #ff8a80; }
 /* 管理模式：卡片不再浮起，点一下是选择；左上角一个圆形勾选 */
 .rbt-hcard.managing:hover { transform: none; }
@@ -968,7 +968,7 @@ body.rbt-shell.rbt-home #sheld { visibility: hidden; }
   display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.85);
   background: rgba(20, 20, 24, 0.35);
-  color: #fff; font-size: 12px;
+  color: #fff; font-size: calc(12px * var(--fontScale, 1));
 }
 .rbt-hcard.selected .rbt-hcard-check { border-color: var(--rbd-accent, #0a84ff); background: var(--rbd-accent, #0a84ff); }
 /* 管理模式底部的操作条：贴在画廊底部 */
@@ -980,14 +980,14 @@ body.rbt-shell.rbt-home #sheld { visibility: hidden; }
   background: var(--rbd-bg1, #1e1e21);
   box-shadow: 0 0 0 1px var(--rbd-hairline, rgba(255, 255, 255, 0.07)), 0 12px 32px rgba(0, 0, 0, 0.4);
 }
-.rbt-manage-count { font-size: 13px; font-weight: 600; white-space: nowrap; }
+.rbt-manage-count { font-size: calc(13px * var(--fontScale, 1)); font-weight: 600; white-space: nowrap; }
 .rbt-manage-gap { flex: 1; }
 .rbt-home-btn.active { background: var(--rbd-accent-soft, rgba(10, 132, 255, 0.18)); color: var(--rbd-accent, #0a84ff); }
 .rbt-home-btn.danger { color: #ff8a80; }
 .rbt-home-btn:disabled { opacity: 0.4; cursor: default; }
 
 /* ---- 左栏：标题、底部的酒馆链接 ---- */
-.rbt-left-title { font-size: 12px; font-weight: 600; color: var(--rbd-text2, #9ca1aa); padding: 2px 2px 0; }
+.rbt-left-title { font-size: calc(12px * var(--fontScale, 1)); font-weight: 600; color: var(--rbd-text2, #9ca1aa); padding: 2px 2px 0; }
 .rbt-left-foot { display: flex; align-items: center; gap: 4px; }
 .rbt-left-foot > .rbt-foot-btn + .rbt-foot-btn { margin-left: 0; }
 .rbt-foot-more { position: relative; margin-left: auto; }
@@ -1002,16 +1002,16 @@ body.rbt-shell.rbt-home #sheld { visibility: hidden; }
 }
 .rbt-foot-menu a {
   display: flex; align-items: center; gap: var(--rbd-s-2); height: 34px; padding: 0 var(--rbd-s-2);
-  border-radius: var(--rbd-r-s); color: var(--SmartThemeBodyColor); font-size: 13px; text-decoration: none;
+  border-radius: var(--rbd-r-s); color: var(--SmartThemeBodyColor); font-size: calc(13px * var(--fontScale, 1)); text-decoration: none;
 }
 .rbt-foot-menu a:hover { background: var(--rbd-bg2-hover, color-mix(in srgb, var(--rbd-text1) 12%, transparent)); }
-.rbt-foot-menu a i { font-size: 12px; opacity: 0.75; }
-.rbt-menu-caption { padding: 6px var(--rbd-s-2) 4px; font-size: 11.5px; color: var(--rbd-text3, #6b707a); }
-.rbt-asheet-items .rbt-menu-caption { padding: 12px 16px; text-align: center; font-size: 13px; }
+.rbt-foot-menu a i { font-size: calc(12px * var(--fontScale, 1)); opacity: 0.75; }
+.rbt-menu-caption { padding: 6px var(--rbd-s-2) 4px; font-size: calc(11.5px * var(--fontScale, 1)); color: var(--rbd-text3, #6b707a); }
+.rbt-asheet-items .rbt-menu-caption { padding: 12px 16px; text-align: center; font-size: calc(13px * var(--fontScale, 1)); }
 .rbt-asheet-items a {
   display: flex; align-items: center; justify-content: center; gap: 8px; height: 54px; padding: 0 16px;
   border-bottom: 1px solid var(--rbd-hairline, rgba(255, 255, 255, 0.07));
-  color: var(--rbd-accent, #0a84ff); font-size: 17px; text-decoration: none;
+  color: var(--rbd-accent, #0a84ff); font-size: calc(17px * var(--fontScale, 1)); text-decoration: none;
 }
 
 /* 酒馆的 .menu_button 是 width: min-content，中文会一个字一行；按钮文字不换行 */
@@ -1025,19 +1025,19 @@ body.rbt-shell #top-settings-holder .menu_button { white-space: nowrap; }
 .rbt-stat {
   position: relative; display: inline-flex; align-items: center; gap: 6px; flex: 0 1 auto; min-width: 0;
   height: 28px; padding: 0 var(--rbd-s-2); border: 0; border-radius: var(--rbd-r-s); background: transparent;
-  color: var(--rbd-text2, #9ca1aa); font: inherit; font-size: 12.5px; cursor: pointer; white-space: nowrap;
+  color: var(--rbd-text2, #9ca1aa); font: inherit; font-size: calc(12.5px * var(--fontScale, 1)); cursor: pointer; white-space: nowrap;
 }
 .rbt-stat:hover { background: var(--rbd-bg2, color-mix(in srgb, var(--rbd-text1) 6%, transparent)); color: var(--SmartThemeBodyColor); }
 .rbt-stat.active { background: var(--rbd-accent-soft, rgba(10, 132, 255, 0.18)); color: var(--rbd-accent, #0a84ff); }
 .rbt-stat.warn { color: var(--SmartThemeBodyColor); }
-.rbt-stat > i:first-child { flex: none; width: 14px; font-size: 12px; text-align: center; }
+.rbt-stat > i:first-child { flex: none; width: 14px; font-size: calc(12px * var(--fontScale, 1)); text-align: center; }
 .rbt-stat-img { flex: none; width: 18px; height: 18px; border-radius: 50%; object-fit: cover; }
 .rbt-stat-text { min-width: 0; max-width: 6em; overflow: hidden; text-overflow: ellipsis; }
-.rbt-stat-badge { flex: none; font-size: 9px; opacity: 0.7; }
+.rbt-stat-badge { flex: none; font-size: calc(9px * var(--fontScale, 1)); opacity: 0.7; }
 .rbt-stat-dot { position: absolute; top: 3px; right: 3px; width: 6px; height: 6px; border-radius: 50%; background: #e0a040; }
 /* 顶栏里所有按钮一个高度、一样的内边距和字号（编辑角色、存档、新聊天、聊天工具箱、状态栏） */
-.rbt-nav :is(.rbt-gbtn.compact, .rbt-nav-save) { height: 28px; padding: 0 var(--rbd-s-2); font-size: 12.5px; }
-.rbt-nav .rbt-gbtn.compact i { font-size: 12px; }
+.rbt-nav :is(.rbt-gbtn.compact, .rbt-nav-save) { height: 28px; padding: 0 var(--rbd-s-2); font-size: calc(12.5px * var(--fontScale, 1)); }
+.rbt-nav .rbt-gbtn.compact i { font-size: calc(12px * var(--fontScale, 1)); }
 .rbt-nav-actions { gap: var(--rbd-s-1); }
 /* 窄的时候按重要程度收：先藏模型名，再藏预设名和人设名，最后只剩图标（世界书的数字很短，一直留着） */
 @container (max-width: 900px) {
@@ -1075,24 +1075,24 @@ body.rbt-shell #top-settings-holder .menu_button { white-space: nowrap; }
     will-change: transform;
     contain: layout paint style;
     border-right: 0;
-    font-size: 14px;
+    font-size: calc(14px * var(--fontScale, 1));
   }
   body.rbt-shell.rbt-nav-open .rbt-left { transform: none; }
   .rbt-left-scrim { position: fixed; top: 0; left: 0; width: 100dvw; height: 100dvh; z-index: 3150; background: rgba(0, 0, 0, 0.5); animation: rbt-fade-in 0.2s ease-out; }
   .rbt-left-head { height: 52px; }
-  .rbt-left .rbt-icon-btn { width: 40px; height: 40px; font-size: 17px; }
+  .rbt-left .rbt-icon-btn { width: 40px; height: 40px; font-size: calc(17px * var(--fontScale, 1)); }
   /* 手指比鼠标粗：按钮和行都加高 */
-  .rbt-gbtn { padding: 10px 2px 8px; font-size: 12px; }
-  .rbt-gbtn i { font-size: 17px; }
-  .rbt-gtool { height: 42px; font-size: 14px; }
+  .rbt-gbtn { padding: 10px 2px 8px; font-size: calc(12px * var(--fontScale, 1)); }
+  .rbt-gbtn i { font-size: calc(17px * var(--fontScale, 1)); }
+  .rbt-gtool { height: 42px; font-size: calc(14px * var(--fontScale, 1)); }
   .rbt-recent-row { padding: var(--rbd-s-3) var(--rbd-s-2); }
   .rbt-recent-avatar { width: 38px; height: 38px; }
-  .rbt-search input { height: 38px; font-size: 16px; } /* 16px：iPhone 点进输入框时不会自动放大页面 */
-  .rbt-foot-btn { padding: 9px 8px; font-size: 13px; }
+  .rbt-search input { height: 38px; font-size: max(16px, calc(16px * var(--fontScale, 1))); } /* 16px：iPhone 点进输入框时不会自动放大页面 */
+  .rbt-foot-btn { padding: 9px 8px; font-size: calc(13px * var(--fontScale, 1)); }
 
   /* ---- 导航条：一行 ---- */
   body.rbt-shell .rbt-nav { left: 0; width: 100dvw; padding: 0 4px; gap: 2px; z-index: 50; }
-  .rbt-nav-phone .rbt-icon-btn { width: 40px; height: 40px; font-size: 17px; }
+  .rbt-nav-phone .rbt-icon-btn { width: 40px; height: 40px; font-size: calc(17px * var(--fontScale, 1)); }
   .rbt-nav-phone .rbt-nav-title { justify-content: flex-start; }
   .rbt-nav-phone > .rbt-nav-title > .rbt-nav-name { padding-left: 6px; }
   .rbt-nav-who {
@@ -1100,16 +1100,16 @@ body.rbt-shell #top-settings-holder .menu_button { white-space: nowrap; }
     padding: 6px 8px; border: 0; border-radius: var(--rbd-r-s); background: transparent;
     color: var(--SmartThemeBodyColor); font: inherit; cursor: pointer;
   }
-  .rbt-nav-who > i { flex: none; font-size: 10px; color: var(--rbd-text3, color-mix(in srgb, var(--rbd-text1) 40%, transparent)); }
+  .rbt-nav-who > i { flex: none; font-size: calc(10px * var(--fontScale, 1)); color: var(--rbd-text3, color-mix(in srgb, var(--rbd-text1) 40%, transparent)); }
   .rbt-nav-phone .rbt-nav-avatar { display: block; width: 28px; height: 28px; }
-  .rbt-nav-phone .rbt-nav-name { max-width: none; flex-shrink: 1; min-width: 0; font-size: 16px; }
+  .rbt-nav-phone .rbt-nav-name { max-width: none; flex-shrink: 1; min-width: 0; font-size: calc(16px * var(--fontScale, 1)); }
   .rbt-nav-phone .rbt-nav-actions .rbt-gbtn.compact { width: 40px; height: 40px; padding: 0; justify-content: center; }
-  .rbt-nav-phone .rbt-nav-actions .rbt-gbtn.compact i { font-size: 17px; }
+  .rbt-nav-phone .rbt-nav-actions .rbt-gbtn.compact i { font-size: calc(17px * var(--fontScale, 1)); }
   .rbt-nav-phone .rbt-nav-actions .rbt-gbtn > span:not(.rbt-dot) { display: none; }
   .rbt-nav-phone .rbt-dot { top: 6px; right: 6px; }
   /* 聊天工具箱：手机上也带字（「工具箱」），只有图标认不出来 */
   .rbt-nav-phone .rbt-nav-actions .rbt-toolbox-btn.compact { width: auto; padding: 0 10px; gap: 5px; }
-  .rbt-nav-phone .rbt-nav-actions .rbt-toolbox-btn > span.rbt-tb-short { display: inline; font-size: 14px; }
+  .rbt-nav-phone .rbt-nav-actions .rbt-toolbox-btn > span.rbt-tb-short { display: inline; font-size: calc(14px * var(--fontScale, 1)); }
 
   /* ---- 酒馆的面板：全屏 ---- */
   body.rbt-shell #top-settings-holder #left-nav-panel,
@@ -1134,7 +1134,7 @@ body.rbt-shell #top-settings-holder .menu_button { white-space: nowrap; }
   }
   body.rbt-shell #top-settings-holder #rm_api_block { height: 100dvh !important; }
   body.rbt-shell .rbt-sheet-head { padding: var(--rbd-s-2) var(--rbd-s-2) var(--rbd-s-2) var(--rbd-inset); }
-  body.rbt-shell .rbt-sheet-close { width: 40px; height: 40px; font-size: 17px; }
+  body.rbt-shell .rbt-sheet-close { width: 40px; height: 40px; font-size: calc(17px * var(--fontScale, 1)); }
   body.rbt-shell.rbt-open-modal::after { inset: auto; top: 0; left: 0; width: 100dvw; height: 100dvh; }
 
   /* ---- 全局工具箱：全屏，标签单独一行 ---- */
@@ -1152,7 +1152,7 @@ body.rbt-shell #top-settings-holder .menu_button { white-space: nowrap; }
   .rbt-sheet-tabs.more-right { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
   .rbt-sheet-tabs.more-left { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 28px), transparent); }
   .rbt-sheet-tabs.more-left.more-right { -webkit-mask-image: linear-gradient(to right, transparent, #000 28px, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(to right, transparent, #000 28px, #000 calc(100% - 28px), transparent); }
-  .rbt-sheet-tabs button { flex: 1 0 auto; padding: 7px 6px; font-size: 13px !important; }
+  .rbt-sheet-tabs button { flex: 1 0 auto; padding: 7px 6px; font-size: calc(13px * var(--fontScale, 1)) !important; }
   .rbt-sheet-body { padding: var(--rbd-s-3) var(--rbd-inset) var(--rbd-s-6); }
 
   /* ---- 标题栏里的说明（比如世界书面板列出的已加载世界书）：手机上换到第二行、自动折行，不撑出横向滚动 ---- */
@@ -1180,7 +1180,7 @@ body.rbt-shell #top-settings-holder .menu_button { white-space: nowrap; }
   .rbt-sheet.rbt-imp { top: 0; left: 0; transform: none; width: 100dvw; height: 100dvh; max-height: none; border-radius: 0; }
   .rbt-imp-backdrop { inset: auto; top: 0; left: 0; width: 100dvw; height: 100dvh; }
   .rbt-imp .rbt-sheet-bar { flex-wrap: nowrap; }
-  .rbt-imp .rbt-sheet-close { width: 40px; height: 40px; font-size: 17px; }
+  .rbt-imp .rbt-sheet-close { width: 40px; height: 40px; font-size: calc(17px * var(--fontScale, 1)); }
   .rbt-imp .rbt-sheet-body { padding: 12px; }
   .rbt-imp-item { padding: 14px; }
   .rbt-imp-foot > small { display: none; }
@@ -1190,12 +1190,12 @@ body.rbt-shell #top-settings-holder .menu_button { white-space: nowrap; }
   .rbt-imp-kind { padding: 3px 8px; }
   .rbt-imp-pick .rbt-imp-foot { justify-content: center; }
   .rbt-imp-foot { justify-content: flex-end; }
-  .rbt-imp-foot .rbt-btn { padding: 9px 18px; font-size: 14px; }
+  .rbt-imp-foot .rbt-btn { padding: 9px 18px; font-size: calc(14px * var(--fontScale, 1)); }
 
   /* ---- 首页：角色画廊一行两张 ---- */
   .rbt-home-gallery { padding: var(--rbd-s-4) var(--rbd-inset) var(--rbd-s-6); }
   .rbt-home-head { gap: 10px; }
-  .rbt-home-head h1 { font-size: 22px; }
+  .rbt-home-head h1 { font-size: calc(22px * var(--fontScale, 1)); }
   .rbt-home-search { order: 3; width: 100%; }
   .rbt-home-actions { order: 2; margin-left: auto; flex-wrap: nowrap; }
   .rbt-home-import { display: inline-flex !important; }
@@ -1210,11 +1210,11 @@ body.rbt-shell #top-settings-holder .menu_button { white-space: nowrap; }
   .rbt-hcard:hover { transform: none; }
   .rbt-hcard:hover .rbt-hcard-img { transform: none; }
   .rbt-hcard-text { padding: 0 10px 14px; }
-  .rbt-hcard-name { font-size: 16px; }
-  .rbt-hcard-pill { top: 8px; left: 8px; padding: 4px 9px 4px 8px; font-size: 11px; }
+  .rbt-hcard-name { font-size: calc(16px * var(--fontScale, 1)); }
+  .rbt-hcard-pill { top: 8px; left: 8px; padding: 4px 9px 4px 8px; font-size: calc(11px * var(--fontScale, 1)); }
   /* 手机：右上角的「⋯」大一点，好点 */
   .rbt-hcard-acts { top: 6px; right: 6px; }
-  .rbt-hcard-act { width: 36px; height: 36px; font-size: 14px; }
+  .rbt-hcard-act { width: 36px; height: 36px; font-size: calc(14px * var(--fontScale, 1)); }
   .rbt-hcard-pill { max-width: calc(100% - 52px); }
 
   /* ---- 聊天：头像小一点、消息左右留白少一点，宽度留给正文 ---- */
@@ -1284,10 +1284,10 @@ body.rbt-shell #select_chat_popup > [name="selectChatPopupHeader"] .menu_button 
   border: 0 !important; border-radius: var(--rbd-r-s) !important;
   background: color-mix(in srgb, var(--rbd-text1) 9%, transparent) !important;
   box-shadow: inset 0 0 0 1px var(--rbd-line, color-mix(in srgb, var(--rbd-text1) 14%, transparent)) !important;
-  color: var(--SmartThemeBodyColor) !important; font-size: 13px !important; font-weight: 500; filter: none !important; opacity: 1 !important;
+  color: var(--SmartThemeBodyColor) !important; font-size: calc(13px * var(--fontScale, 1)) !important; font-weight: 500; filter: none !important; opacity: 1 !important;
 }
 body.rbt-shell #select_chat_popup > [name="selectChatPopupHeader"] .menu_button:hover { background: color-mix(in srgb, var(--rbd-text1) 14%, transparent) !important; }
-body.rbt-shell #select_chat_popup > [name="selectChatPopupHeader"] .menu_button i { font-size: 12px; opacity: 0.85; }
+body.rbt-shell #select_chat_popup > [name="selectChatPopupHeader"] .menu_button i { font-size: calc(12px * var(--fontScale, 1)); opacity: 0.85; }
 body.rbt-shell #select_chat_popup > [name="selectChatPopupHeader"] > *:has(.menu_button) { display: flex; gap: 8px; margin: 0 !important; }
 body.rbt-shell #select_chat_search { flex: 1 1 100% !important; order: 9; height: 36px; margin: 0 !important; }
 /* 「新聊天」的图标和顶栏一致：方框加笔 */
@@ -1372,10 +1372,10 @@ body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-dra
 body.rbt-shell #WorldInfo .rbt-wi-more { display: none; }
 body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .rbt-wi-more {
   align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; margin: 4px 0 0;
-  border: 0; border-radius: var(--rbd-r-s); background: transparent; color: var(--rbd-accent, #0a84ff); font: inherit; font-size: 13px; cursor: pointer;
+  border: 0; border-radius: var(--rbd-r-s); background: transparent; color: var(--rbd-accent, #0a84ff); font: inherit; font-size: calc(13px * var(--fontScale, 1)); cursor: pointer;
 }
 body.rbt-shell #WorldInfo .rbt-wi-more:hover { background: color-mix(in srgb, var(--rbd-accent, #0a84ff) 10%, transparent); }
-body.rbt-shell #WorldInfo .rbt-wi-more i { font-size: 11px; }
+body.rbt-shell #WorldInfo .rbt-wi-more i { font-size: calc(11px * var(--fontScale, 1)); }
 /* 摘要行只在手机上、收起时显示 */
 body.rbt-shell #WorldInfo .rbt-wi-sum { display: none; }
 
@@ -1402,16 +1402,16 @@ body.rbt-shell #WorldInfo .rbt-wi-sum { display: none; }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .world_entry_thin_controls:not([name]),
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .world_entry_thin_controls:not([name]) > .flex-container,
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .WIEnteryHeaderControls { display: contents; }
-  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .inline-drawer-header > .world_entry_thin_controls > .inline-drawer-toggle { grid-column: 1; grid-row: 1; justify-self: center; font-size: 20px; min-width: 32px; min-height: 32px; display: grid; place-items: center; }
-  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .killSwitch { grid-column: 2; grid-row: 1; justify-self: center; font-size: 20px; min-width: 32px; min-height: 32px; display: grid; place-items: center; }
+  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .inline-drawer-header > .world_entry_thin_controls > .inline-drawer-toggle { grid-column: 1; grid-row: 1; justify-self: center; font-size: calc(20px * var(--fontScale, 1)); min-width: 32px; min-height: 32px; display: grid; place-items: center; }
+  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .killSwitch { grid-column: 2; grid-row: 1; justify-self: center; font-size: calc(20px * var(--fontScale, 1)); min-width: 32px; min-height: 32px; display: grid; place-items: center; }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .WIEntryTitleAndStatus { grid-column: 3 / -1; grid-row: 1; min-width: 0; display: flex; align-items: center !important; gap: 6px; }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .WIEntryTitleAndStatus > * { margin: 0 !important; }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .WIEntryTitleAndStatus > .flex-container { flex: 1 1 auto; min-width: 0; }
-  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) textarea[name="comment"] { width: 100% !important; height: 36px !important; min-height: 36px !important; resize: none !important; overflow: hidden; white-space: nowrap; font-size: 15px !important; font-weight: 600; line-height: 1.4 !important; padding-top: 7px !important; padding-bottom: 7px !important; }
+  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) textarea[name="comment"] { width: 100% !important; height: 36px !important; min-height: 36px !important; resize: none !important; overflow: hidden; white-space: nowrap; font-size: calc(15px * var(--fontScale, 1)) !important; font-weight: 600; line-height: 1.4 !important; padding-top: 7px !important; padding-bottom: 7px !important; }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) select[name="entryStateSelector"] { height: 36px !important; min-height: 36px !important; }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .rbt-wi-sum {
     grid-column: 1 / -1; grid-row: 2; display: block; padding: 0 2px 0 4px;
-    font-size: 12.5px; line-height: 1.45; color: var(--rbd-text3, #8a8f98);
+    font-size: calc(12.5px * var(--fontScale, 1)); line-height: 1.45; color: var(--rbd-text3, #8a8f98);
     overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) [name="PositionBlock"] { grid-column: 1 / -1; grid-row: 2; min-width: 0; }
@@ -1430,7 +1430,7 @@ body.rbt-shell #WorldInfo .rbt-wi-sum { display: none; }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .inline-drawer-header:has(input[name="depth"]:disabled) .WIEnteryHeaderControls > .world_entry_form_control:nth-child(3) { grid-column: 1 / 7; }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .inline-drawer-header:has(input[name="depth"]:disabled) .WIEnteryHeaderControls > .world_entry_form_control:nth-child(4) { grid-column: 7 / -1; }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .wi-enter-footer-text input { width: 100% !important; max-width: none !important; }
-  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .WIEntryHeaderTitleMobile { display: block; margin: 0 0 6px !important; font-size: 12px !important; color: var(--rbd-text3, #8a8f98); }
+  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .WIEntryHeaderTitleMobile { display: block; margin: 0 0 6px !important; font-size: calc(12px * var(--fontScale, 1)) !important; color: var(--rbd-text3, #8a8f98); }
 
   /* 收起时：标题区只留第一行和摘要；展开后摘要换成可编辑的字段（只加 display:none，不改酒馆自己的 display） */
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls):has(> form > .inline-drawer > .inline-drawer-header .inline-drawer-icon.down) .inline-drawer-header :is([name="PositionBlock"], .wi-enter-footer-text, .menu_button, .drag-handle) { display: none !important; }
@@ -1442,10 +1442,10 @@ body.rbt-shell #WorldInfo .rbt-wi-sum { display: none; }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .world_entry_edit .flex-container { flex-wrap: wrap !important; gap: 12px !important; margin: 0 !important; }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .world_entry_edit .world_entry_form_control { flex: 1 1 100% !important; min-width: 0 !important; margin: 0 !important; padding: 0 !important; }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .world_entry_edit .world_entry_form_control > label,
-  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .world_entry_edit .world_entry_form_control > small { display: block; margin: 0 0 6px !important; font-size: 12px !important; color: var(--rbd-text3, #8a8f98); text-align: left !important; }
-  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) :is(input.text_pole, select.text_pole) { height: 36px !important; min-height: 36px; font-size: 15px !important; }
-  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) :is(textarea.keyprimarytextpole, textarea.keysecondarytextpole) { min-height: 36px !important; padding-top: 7px !important; padding-bottom: 7px !important; font-size: 15px !important; }
-  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) textarea[name="content"] { min-height: 180px; font-size: 15px !important; }
+  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .world_entry_edit .world_entry_form_control > small { display: block; margin: 0 0 6px !important; font-size: calc(12px * var(--fontScale, 1)) !important; color: var(--rbd-text3, #8a8f98); text-align: left !important; }
+  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) :is(input.text_pole, select.text_pole) { height: 36px !important; min-height: 36px; font-size: calc(15px * var(--fontScale, 1)) !important; }
+  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) :is(textarea.keyprimarytextpole, textarea.keysecondarytextpole) { min-height: 36px !important; padding-top: 7px !important; padding-bottom: 7px !important; font-size: calc(15px * var(--fontScale, 1)) !important; }
+  body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) textarea[name="content"] { min-height: 180px; font-size: calc(15px * var(--fontScale, 1)) !important; }
   /* 「更多设置」里的两排小设置（包含组 / 组权重 / 黏性 / 冷却 / 延迟，角色绑定 / 生成类型）：手机上一行两个，不挤成五等分 */
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .world_entry_edit > .flex-container.flexGap10 > * { flex: 1 1 calc(50% - 6px) !important; min-width: 0 !important; }
   body.rbt-shell #WorldInfo:not(.rbt-wi-off) .world_entry:has(> form > .inline-drawer > .inline-drawer-header > .world_entry_thin_controls) .world_entry_edit > .flex-container.flexGap10 > .flex4 { flex-basis: 100% !important; }
@@ -1504,7 +1504,7 @@ body.rbt-shell .rbt-nav-progress::before {
    手机：名字下面一行灰字写存档名；「存档」是右边和编辑角色、新聊天一样的图标按钮。 */
 .rbt-nav .rbt-nav-save { gap: 6px; max-width: 260px; }
 .rbt-nav .rbt-nav-save > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.rbt-nav .rbt-nav-save > .rbt-nav-save-chev { font-size: 9px; opacity: 0.7; }
+.rbt-nav .rbt-nav-save > .rbt-nav-save-chev { font-size: calc(9px * var(--fontScale, 1)); opacity: 0.7; }
 .rbt-nav-who-text { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; max-width: 100%; overflow: hidden; line-height: 1.2; }
 /* 名字和下面的存档名都不能比这一列宽：竖排的 flex 里，靠左对齐的子元素会按完整长度排开，
    长卡名就冲出按钮、盖住后面的存档和新聊天图标。限宽后放不下的显示省略号 */
@@ -1512,7 +1512,7 @@ body.rbt-shell .rbt-nav-progress::before {
 .rbt-nav-who-text > .rbt-nav-sub { max-width: 100%; min-width: 0; }
 /* 存档名一行：要显示省略号得是普通的块（flex 里的文字不会出省略号） */
 .rbt-nav-who-text > .rbt-nav-sub { display: block; }
-.rbt-nav-sub { display: flex; align-items: center; gap: 4px; max-width: 100%; font-size: 11px; color: var(--rbd-text3, color-mix(in srgb, var(--rbd-text1) 50%, transparent)); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rbt-nav-sub { display: flex; align-items: center; gap: 4px; max-width: 100%; font-size: calc(11px * var(--fontScale, 1)); color: var(--rbd-text3, color-mix(in srgb, var(--rbd-text1) 50%, transparent)); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* 左栏图标格里插件的按钮：插件给的是图片图标时，和字体图标一样大 */
 .rbt-gbtn-img { width: 18px; height: 18px; object-fit: contain; }
@@ -1532,23 +1532,23 @@ body.rbt-shell .rbt-nav-progress::before {
 .rbt-tag-list { display: flex; flex-direction: column; overflow-y: auto; min-height: 0; }
 .rbt-tag-row {
   display: flex; align-items: center; gap: 10px; min-height: 36px; padding: 0 var(--rbd-s-2);
-  border: 0; border-radius: var(--rbd-r-s); background: none; color: inherit; font: inherit; font-size: 13px; text-align: left; cursor: pointer;
+  border: 0; border-radius: var(--rbd-r-s); background: none; color: inherit; font: inherit; font-size: calc(13px * var(--fontScale, 1)); text-align: left; cursor: pointer;
 }
 .rbt-tag-row:hover { background: var(--rbd-bg2, rgba(255, 255, 255, 0.06)); }
-.rbt-tag-box { font-size: 18px; color: var(--rbd-text3, rgba(255, 255, 255, 0.45)); }
+.rbt-tag-box { font-size: calc(18px * var(--fontScale, 1)); color: var(--rbd-text3, rgba(255, 255, 255, 0.45)); }
 .rbt-tag-row.all .rbt-tag-box, .rbt-tag-row.some .rbt-tag-box { color: var(--rbd-accent, #0a84ff); }
 @media (max-width: 1000px) {
-  .rbt-tag-row { min-height: 44px; font-size: 15px; }
+  .rbt-tag-row { min-height: 44px; font-size: calc(15px * var(--fontScale, 1)); }
   .rbt-asheet .rbt-tag-new, .rbt-asheet .rbt-tag-list { padding: 0 var(--rbd-s-3); }
   .rbt-asheet .rbt-tag-list { max-height: 50dvh; }
 }
 /* 手机底部菜单里的标签列表：和别的底部菜单项（居中、蓝字）不一样，是左对齐的勾选列表 */
 .rbt-asheet-items .rbt-tag-new { display: flex; align-items: center; gap: var(--rbd-s-2); padding: var(--rbd-s-3); border-bottom: 1px solid var(--rbd-hairline, rgba(255, 255, 255, 0.07)); }
-.rbt-asheet-items .rbt-tag-new .rbt-input { flex: 1; min-width: 0; height: 40px; margin: 0; font-size: 16px; }
-.rbt-asheet-items .rbt-tag-new button { flex: none; width: auto; min-height: 40px; padding: 0 var(--rbd-s-4); border: 0; border-radius: var(--rbd-r-s); justify-content: center; font-size: 15px; }
+.rbt-asheet-items .rbt-tag-new .rbt-input { flex: 1; min-width: 0; height: 40px; margin: 0; font-size: calc(16px * var(--fontScale, 1)); }
+.rbt-asheet-items .rbt-tag-new button { flex: none; width: auto; min-height: 40px; padding: 0 var(--rbd-s-4); border: 0; border-radius: var(--rbd-r-s); justify-content: center; font-size: calc(15px * var(--fontScale, 1)); }
 .rbt-asheet-items .rbt-tag-list { padding: 0; overflow-y: auto; }
 .rbt-asheet-items .rbt-tag-list .rbt-tag-row { justify-content: flex-start; gap: 12px; padding: 0 var(--rbd-s-4); color: var(--rbd-text1, inherit); text-align: left; }
-.rbt-asheet-items .rbt-tag-list .rbt-tag-row .rbt-tag-box { font-size: 20px; opacity: 1; }
+.rbt-asheet-items .rbt-tag-list .rbt-tag-row .rbt-tag-box { font-size: calc(20px * var(--fontScale, 1)); opacity: 1; }
 
 /* ============================================================ 手机：消息的排法 ===
    挪位置是 mesActions.ts 做的，这里只排版。不改这些按钮的 display（酒馆用它显示 / 隐藏）。
@@ -1582,14 +1582,14 @@ body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes .rbt-edit-bar {
   margin: 0 -10px 4px; padding: 6px 10px; background: var(--rbd-bg1, var(--SmartThemeBlurTintColor, #1c1c1e));
   border-bottom: 1px solid var(--rbd-hairline, rgba(255, 255, 255, 0.08));
 }
-body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes .rbt-edit-bar .rbt-btn { min-height: 40px; min-width: 64px; margin: 0; padding: 0 14px; border: 0; border-radius: var(--rbd-r-s, 8px); font-size: 15px; box-shadow: none; }
+body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes .rbt-edit-bar .rbt-btn { min-height: 40px; min-width: 64px; margin: 0; padding: 0 14px; border: 0; border-radius: var(--rbd-r-s, 8px); font-size: calc(15px * var(--fontScale, 1)); box-shadow: none; }
 /* 取消：普通文字；保存：主色实心（一眼看出哪个是保存） */
 body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes .rbt-edit-bar .rbt-edit-cancel { background: none; color: var(--rbd-text1, inherit); padding-left: 4px; justify-content: flex-start; }
 body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes .rbt-edit-bar .rbt-edit-save { background: var(--rbd-accent, #0a84ff); color: #fff; font-weight: 600; }
 body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes .rbt-edit-bar .rbt-edit-spacer { flex: 1; }
 body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes .rbt-edit-bar .rbt-edit-more {
   display: grid; place-items: center; width: 40px; height: 40px; padding: 0; margin: 0; border: 0; border-radius: var(--rbd-r-s, 8px);
-  background: none; color: var(--rbd-text2, inherit); font-size: 16px; cursor: pointer;
+  background: none; color: var(--rbd-text2, inherit); font-size: calc(16px * var(--fontScale, 1)); cursor: pointer;
 }
 /* 编辑框：酒馆限高 75% 屏幕、框里自己滚，光标还放在最后。手机上框里滚和聊天滚叠在一起，很难滚回开头。
    改成框跟着内容一样高，只有聊天在滚。 */
@@ -1598,7 +1598,7 @@ body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes :is(.edit_textarea, .reason
 body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes :is(.mes_button, .extraMesButtons > div),
 body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes .rbt-mes-swipes :is(.swipe_left, .swipe_right) {
   box-sizing: border-box; width: 36px; height: 36px; padding: 0; margin: 0;
-  font-size: 15px; line-height: 36px; text-align: center; opacity: 0.55; filter: none;
+  font-size: calc(15px * var(--fontScale, 1)); line-height: 36px; text-align: center; opacity: 0.55; filter: none;
 }
 /* 最后一条：正文下面一行 */
 body.rbt-shell.rbt-compact.rbt-mes-layout .rbt-mes-actions { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 0 2px; margin: 2px 0 0; }
@@ -1609,9 +1609,9 @@ body.rbt-shell.rbt-compact.rbt-mes-layout .rbt-mes-swipes { display: flex; align
 /* 正在生成、正在换回复时这一行不能用（酒馆自己也把最后一条的按钮藏起来，这一行是挪出来的，要另外藏） */
 body:is([data-generating="true"], [data-swiping="true"]).rbt-shell.rbt-compact.rbt-mes-layout #chat .last_mes .rbt-mes-actions { display: none; }
 body.rbt-shell.rbt-compact.rbt-mes-layout .mes:not(.last_mes):not(.swipes_visible) .rbt-mes-swipes { display: none; }
-body.rbt-shell.rbt-compact.rbt-mes-layout .rbt-mes-swipes :is(.swipe_left, .swipe_right) { position: static; display: flex; align-items: center; justify-content: center; font-size: 17px; }
+body.rbt-shell.rbt-compact.rbt-mes-layout .rbt-mes-swipes :is(.swipe_left, .swipe_right) { position: static; display: flex; align-items: center; justify-content: center; font-size: calc(17px * var(--fontScale, 1)); }
 body.rbt-shell.rbt-compact.rbt-mes-layout .rbt-mes-swipes .swipeRightBlock { position: static; flex-direction: row-reverse; align-items: center; pointer-events: auto; }
-body.rbt-shell.rbt-compact.rbt-mes-layout .rbt-mes-swipes .swipes-counter { margin: 0; height: auto; min-width: 30px; padding: 0 2px; font-size: 13px; opacity: 0.7; }
+body.rbt-shell.rbt-compact.rbt-mes-layout .rbt-mes-swipes .swipes-counter { margin: 0; height: auto; min-width: 30px; padding: 0 2px; font-size: calc(13px * var(--fontScale, 1)); opacity: 0.7; }
 /* 1/1 或第一条回复时，左箭头也留着，只是变灰、点不了（位置不跳） */
 body.rbt-shell.rbt-compact.rbt-mes-layout .mes:not(.swipes_visible) .rbt-mes-swipes .swipe_left,
 body.rbt-shell.rbt-compact.rbt-mes-layout .rbt-mes-swipes .swipe_left[hidden] { visibility: visible; opacity: 0.2 !important; pointer-events: none; }
@@ -1626,15 +1626,15 @@ body.rbt-shell.rbt-compact.rbt-mes-layout .rbt-mes-swipes .swipe_left[hidden] { 
 body.rbt-shell #send_form :is(#leftSendForm, #rightSendForm) { gap: 0; flex-wrap: nowrap !important; flex-shrink: 0; width: auto !important; }
 body.rbt-shell #send_form :is(#leftSendForm, #rightSendForm) > div {
   box-sizing: border-box; width: 34px; height: 40px; min-width: 34px; margin: 0;
-  font-size: 18px; justify-content: center; align-items: center;
+  font-size: calc(18px * var(--fontScale, 1)); justify-content: center; align-items: center;
 }
-body.rbt-shell #send_form :is(#leftSendForm, #rightSendForm) > div::before { font-size: 18px; }
+body.rbt-shell #send_form :is(#leftSendForm, #rightSendForm) > div::before { font-size: calc(18px * var(--fontScale, 1)); }
 /* 名字下面一行写时间（手机上一行放不下名字加完整日期） */
 /* 名字（隐藏消息时后面有个小幽灵）一行；时间、楼层、计时、token 数是一类，在名字下面一行，灰色小字 */
 body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes .ch_name .alignItemsBaseline { flex-wrap: wrap; align-items: baseline; gap: 0 6px; min-width: 0; }
 body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes .rbt-mes-meta { flex: 1 1 100%; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; min-width: 0; }
 body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes .rbt-mes-meta > * {
-  margin: 0; padding: 0; font-size: 11px; line-height: 1.3; font-weight: 400; white-space: nowrap; color: var(--rbd-text3, inherit);
+  margin: 0; padding: 0; font-size: calc(11px * var(--fontScale, 1)); line-height: 1.3; font-weight: 400; white-space: nowrap; color: var(--rbd-text3, inherit);
 }
 body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes .rbt-mes-meta > :empty { display: none; }
 body.rbt-shell.rbt-compact.rbt-mes-layout #chat .mes .ch_name .name_text { line-height: 1.25; }
@@ -1673,17 +1673,17 @@ body.rbt-shell #select_chat_div .select_chat_block > .flex-container > .flex-con
 /* 酒馆给存档名写了 width: fit-content：名字长了会撑出这一格，盖住「⋯」。宽度跟着格子走，放不下就显示省略号 */
 body.rbt-shell #select_chat_div .select_chat_block .select_chat_block_filename {
   grid-area: name; width: auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-  font-size: 15px; font-weight: 600; color: var(--rbd-text1, var(--SmartThemeBodyColor)); opacity: 1;
+  font-size: calc(15px * var(--fontScale, 1)); font-weight: 600; color: var(--rbd-text1, var(--SmartThemeBodyColor)); opacity: 1;
 }
 body.rbt-shell #select_chat_div .select_chat_block :is(.renameChatButton, .select_chat_info, .select_chat_actions) { display: none; }
 body.rbt-shell #select_chat_div .select_chat_block .select_chat_block_mes {
-  grid-area: mes; margin: 0; padding: 0; font-size: 13.5px; line-height: 1.5; color: var(--rbd-text2, color-mix(in srgb, var(--rbd-text1) 70%, transparent));
+  grid-area: mes; margin: 0; padding: 0; font-size: calc(13.5px * var(--fontScale, 1)); line-height: 1.5; color: var(--rbd-text2, color-mix(in srgb, var(--rbd-text1) 70%, transparent));
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; white-space: normal; word-break: break-word;
 }
-body.rbt-shell #select_chat_div .rbt-chat-meta { grid-area: meta; font-size: 12px; color: var(--rbd-text3, color-mix(in srgb, var(--rbd-text1) 45%, transparent)); }
+body.rbt-shell #select_chat_div .rbt-chat-meta { grid-area: meta; font-size: calc(12px * var(--fontScale, 1)); color: var(--rbd-text3, color-mix(in srgb, var(--rbd-text1) 45%, transparent)); }
 body.rbt-shell #select_chat_div .rbt-chat-more {
   grid-area: more; align-self: start; display: grid; place-items: center; width: 36px; height: 32px; margin: -6px 0 -6px 0; padding: 0;
-  border: 0; border-radius: var(--rbd-r-s); background: none; color: var(--rbd-text2, inherit); font-size: 14px; cursor: pointer; opacity: 0.7;
+  border: 0; border-radius: var(--rbd-r-s); background: none; color: var(--rbd-text2, inherit); font-size: calc(14px * var(--fontScale, 1)); cursor: pointer; opacity: 0.7;
 }
 body.rbt-shell #select_chat_div .rbt-chat-more:hover { opacity: 1; background: var(--rbd-bg2, rgba(255, 255, 255, 0.06)); }
 /* 电脑上的小菜单 */
@@ -1695,7 +1695,7 @@ body.rbt-shell #select_chat_div .rbt-chat-more:hover { opacity: 1; background: v
 .rbt-float-menu > div { display: flex; flex-direction: column; }
 .rbt-float-menu button {
   display: flex; align-items: center; gap: var(--rbd-s-2); height: 34px; padding: 0 var(--rbd-s-2);
-  border: 0; border-radius: var(--rbd-r-s); background: none; color: var(--rbd-text1, inherit); font: inherit; font-size: 13px; text-align: left; cursor: pointer;
+  border: 0; border-radius: var(--rbd-r-s); background: none; color: var(--rbd-text1, inherit); font: inherit; font-size: calc(13px * var(--fontScale, 1)); text-align: left; cursor: pointer;
 }
 .rbt-float-menu button:hover { background: var(--rbd-bg2, rgba(255, 255, 255, 0.08)); }
 .rbt-float-menu button.danger { color: #ff453a; }
@@ -1711,11 +1711,11 @@ body:not(.rbt-shell) :is(.rbt-chat-more, .rbt-chat-meta) { display: none; }
 .rbt-recent-item .rbt-recent-preview { padding-right: 26px; }
 .rbt-recent-more {
   position: absolute; right: 2px; bottom: 4px; display: grid; place-items: center; width: 30px; height: 26px; padding: 0;
-  border: 0; border-radius: var(--rbd-r-s); background: none; color: var(--rbd-text3, inherit); font-size: 12px; cursor: pointer; opacity: 0.8;
+  border: 0; border-radius: var(--rbd-r-s); background: none; color: var(--rbd-text3, inherit); font-size: calc(12px * var(--fontScale, 1)); cursor: pointer; opacity: 0.8;
 }
 .rbt-recent-more:hover { opacity: 1; background: var(--rbd-bg2, rgba(255, 255, 255, 0.08)); color: var(--rbd-text1, inherit); }
 @media (max-width: 1000px) {
-  .rbt-recent-more { width: 36px; height: 32px; bottom: 2px; font-size: 14px; }
+  .rbt-recent-more { width: 36px; height: 32px; bottom: 2px; font-size: calc(14px * var(--fontScale, 1)); }
   .rbt-recent-item .rbt-recent-preview { padding-right: 32px; }
 }
 
@@ -1725,7 +1725,7 @@ body:not(.rbt-shell) :is(.rbt-chat-more, .rbt-chat-meta) { display: none; }
 /* 排序、按标签筛选的选择菜单：电脑上贴着按钮右边往下展开（按钮在页面右边）；手机上从底部弹出（rbt-menu-portal） */
 .rbt-home-picker { font-family: inherit; }
 .rbt-pick.rbt-home-pop .rbt-menu { left: auto; right: 0; width: 240px; }
-.rbt-home-picker-chev { font-size: 9px; opacity: 0.7; }
+.rbt-home-picker-chev { font-size: calc(9px * var(--fontScale, 1)); opacity: 0.7; }
 .rbt-home-manage { display: inline-flex; align-items: center; gap: 6px; }
 /* 搜索框这一行：电脑上和「新建」一起靠右；手机上占满一行，右边接筛选 / 排序 / 管理三个图标 */
 .rbt-home-searchrow { display: flex; align-items: center; gap: 4px; margin-left: auto; min-width: 0; }
@@ -1735,20 +1735,20 @@ body:not(.rbt-shell) :is(.rbt-chat-more, .rbt-chat-meta) { display: none; }
   .rbt-home-searchrow .rbt-home-search { order: 0; flex: 1 1 auto; width: auto; min-width: 0; }
   .rbt-home-tools { flex: none; justify-content: flex-end; flex-wrap: nowrap; gap: 0; }
   .rbt-home-tools :is(.rbt-home-picker-text, .rbt-home-picker-chev) { display: none; }
-  .rbt-home-tools :is(.rbt-home-picker, .rbt-home-manage) { justify-content: center; width: 36px; min-width: 36px; flex: none; min-height: 40px !important; padding: 0 !important; font-size: 16px; }
+  .rbt-home-tools :is(.rbt-home-picker, .rbt-home-manage) { justify-content: center; width: 36px; min-width: 36px; flex: none; min-height: 40px !important; padding: 0 !important; font-size: calc(16px * var(--fontScale, 1)); }
   .rbt-home-tools .rbt-home-manage.active { width: auto; padding: 0 12px !important; }
   .rbt-home-tools .rbt-home-manage.active .rbt-home-picker-text { display: inline; }
   /* 选了标签、换了排序：图标后面写出现在的值 */
   .rbt-home-tools .rbt-home-picker.active { width: auto; max-width: 128px; padding: 0 10px !important; gap: 4px; }
-  .rbt-home-tools .rbt-home-picker.active .rbt-home-picker-text { display: inline; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
+  .rbt-home-tools .rbt-home-picker.active .rbt-home-picker-text { display: inline; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: calc(13px * var(--fontScale, 1)); }
 }
 
 /* 编辑角色：酒馆顶上那行 token 数 + 奖杯 + 眼睛藏起来，token 数挪到标题栏（drawers.ts） */
 body.rbt-shell #right-nav-panel #result_info { display: none !important; }
-body.rbt-shell .rbt-sheet-head .rbt-char-tokens { font-size: 12px; color: var(--rbd-text3, color-mix(in srgb, var(--rbd-text1) 50%, transparent)); white-space: nowrap; }
+body.rbt-shell .rbt-sheet-head .rbt-char-tokens { font-size: calc(12px * var(--fontScale, 1)); color: var(--rbd-text3, color-mix(in srgb, var(--rbd-text1) 50%, transparent)); white-space: nowrap; }
 body.rbt-shell .rbt-sheet-head .rbt-char-stats {
   display: inline-grid; place-items: center; width: 32px; height: 32px; padding: 0; margin-left: 2px;
-  border: 0; border-radius: var(--rbd-r-s); background: none; color: var(--rbd-text3, inherit); font-size: 13px; cursor: pointer;
+  border: 0; border-radius: var(--rbd-r-s); background: none; color: var(--rbd-text3, inherit); font-size: calc(13px * var(--fontScale, 1)); cursor: pointer;
 }
 body.rbt-shell .rbt-sheet-head .rbt-char-stats:hover { background: var(--rbd-bg2, rgba(255, 255, 255, 0.08)); color: var(--rbd-text1, inherit); }
 /* 编辑角色标题栏里的 token 数：电脑上靠右，挨着 ✕ */
@@ -1770,7 +1770,7 @@ body.rbt-shell #create_button_label {
   width: auto; min-width: 0; padding: 0 14px; gap: 6px;
   background: var(--rbd-accent, #0a84ff) !important; color: #fff !important; opacity: 1;
 }
-body.rbt-shell #create_button_label::after { content: '创建角色'; font-family: var(--rbd-font, var(--mainFontFamily, sans-serif)); font-weight: 600; font-size: 14px; }
+body.rbt-shell #create_button_label::after { content: '创建角色'; font-family: var(--rbd-font, var(--mainFontFamily, sans-serif)); font-weight: 600; font-size: calc(14px * var(--fontScale, 1)); }
 
 /* 设置里开了「每条消息都能切换回复」时，手机上其他消息的箭头（酒馆放在两边、盖在正文上）藏掉；只有最后一条在下面那一行切换 */
 body.rbt-shell.rbt-compact .mes:not(.last_mes) > :is(.swipe_left, .swipeRightBlock) { display: none; }
@@ -1783,7 +1783,7 @@ body.rbt-shell #chat .mes[is_user="true"] .avatar { cursor: pointer; }
 /* 工具箱按钮上「需要注意」的项数（琥珀色小圆，和状态点同色） */
 .rbt-tb-count {
   display: inline-grid; place-items: center; min-width: 17px; height: 17px; padding: 0 4px; margin-left: 2px;
-  border-radius: 9px; background: #e0a040; color: #1d1d1f; font-size: 11px; font-weight: 700; line-height: 1;
+  border-radius: 9px; background: #e0a040; color: #1d1d1f; font-size: calc(11px * var(--fontScale, 1)); font-weight: 700; line-height: 1;
 }
 .rbt-nav-phone .rbt-nav-actions .rbt-gbtn > span.rbt-tb-count { display: inline-grid; }
 
